@@ -11,12 +11,12 @@ Description: Holds information on whether an object has been selected
 
 #include <string>
 
-#include <components/Component.h>
+#include <entity/IComponent.h>
 #include <resources/CollisionBoxes.h>
 
-#include <core/Entity.h>
+#include <entity/Entity.h>
 
-class CCollision: public Component {
+class CCollision: public IComponent {
 public:
 	CCollision();
 	~CCollision();

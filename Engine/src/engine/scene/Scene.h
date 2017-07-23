@@ -12,7 +12,7 @@ Description: A state within the state machine. Could also be referred
 
 #include <string>
 
-#include <core/Entity.h>
+#include <entity/Entity.h>
 #include <graphics/Camera.h>
 #include <resources/DirectionalLight.h>
 #include <resources/PointLight.h>

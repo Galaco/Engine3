@@ -1,7 +1,6 @@
 #include "CSelectable.h"
 
 CSelectable::CSelectable(){
-	m_type = "Selectable";
 	m_selected = false;
 	m_hovered = false;
 }

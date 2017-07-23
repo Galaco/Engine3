@@ -11,8 +11,5 @@ public:
 	virtual void Update() = 0;
 
 	virtual void Terminate() = 0;
-
-private:
-
 };
 #endif

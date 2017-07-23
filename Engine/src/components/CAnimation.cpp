@@ -1,7 +1,6 @@
 #include "CAnimation.h"
 
 CAnimation::CAnimation(){
-	m_type="Animation";
 }
 
 

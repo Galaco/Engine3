@@ -1,7 +1,6 @@
 #include "CCollision.h"
 
 CCollision::CCollision(){
-	m_type = "Collision";
 	weight = 1.f;
 	dynamic = false;
 }
@@ -19,8 +18,8 @@ void CCollision::rebuildCollisionBox(Model* model)
 		m_collisionBox.buildFromModel(model);
 	}
 
-	if (!m_entity) return;
-	m_collisionBox.resize(m_entity->GetTransform()->getScale(), m_entity->GetTransform()->getPosition());
+	if (!m_owner) return;
+	m_collisionBox.resize(m_owner->GetTransform().getScale(), (m_owner)->GetTransform().getPosition());
 }
 
 

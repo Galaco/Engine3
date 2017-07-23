@@ -2,7 +2,6 @@
 
 
 //Initialize statics. Note these aren't required to be static, but for clarity are
-std::vector<CGraphics*> SGraphics::CGraphicsCache;
 
 CShaderProgram	SGraphics::m_shaderProg;
 CShader SGraphics::m_shader[3];
@@ -179,9 +178,9 @@ void SGraphics::drawEntity(CGraphics* it)
 	if (!it->getModel() || !it->getOwner())
 		return;
 
-	Pipeline::position(it->getOwner()->GetTransform()->getPosition().x, it->getOwner()->GetTransform()->getPosition().y, it->getOwner()->GetTransform()->getPosition().z);
-	Pipeline::rotate(it->getOwner()->GetTransform()->getOrientation().x, it->getOwner()->GetTransform()->getOrientation().y, it->getOwner()->GetTransform()->getOrientation().z);
-	Pipeline::scale(it->getOwner()->GetTransform()->getScale().x, it->getOwner()->GetTransform()->getScale().y, it->getOwner()->GetTransform()->getScale().z);
+	Pipeline::position(it->getOwner()->GetTransform().getPosition().x, it->getOwner()->GetTransform().getPosition().y, it->getOwner()->GetTransform().getPosition().z);
+	Pipeline::rotate(it->getOwner()->GetTransform().getOrientation().x, it->getOwner()->GetTransform().getOrientation().y, it->getOwner()->GetTransform().getOrientation().z);
+	Pipeline::scale(it->getOwner()->GetTransform().getScale().x, it->getOwner()->GetTransform().getScale().y, it->getOwner()->GetTransform().getScale().z);
 
 	switch(it->getRenderMode())
 	{
@@ -299,20 +298,20 @@ void SGraphics::drawText(CGraphics* it)
 	if (!t) 
 		return;
 
-	Pipeline::position(it->getOwner()->GetTransform()->getPosition().x, it->getOwner()->GetTransform()->getPosition().y, it->getOwner()->GetTransform()->getPosition().z);
-	Pipeline::rotate(it->getOwner()->GetTransform()->getOrientation().x, it->getOwner()->GetTransform()->getOrientation().y, it->getOwner()->GetTransform()->getOrientation().z);
+	Pipeline::position(it->getOwner()->GetTransform().getPosition().x, it->getOwner()->GetTransform().getPosition().y, it->getOwner()->GetTransform().getPosition().z);
+	Pipeline::rotate(it->getOwner()->GetTransform().getOrientation().x, it->getOwner()->GetTransform().getOrientation().y, it->getOwner()->GetTransform().getOrientation().z);
 
 	switch (it->getRenderMode())
 	{
 	case RENDER_MODE_2D:
-		Pipeline::scale(it->getOwner()->GetTransform()->getScale().x, it->getOwner()->GetTransform()->getScale().y, it->getOwner()->GetTransform()->getScale().z);
+		Pipeline::scale(it->getOwner()->GetTransform().getScale().x, it->getOwner()->GetTransform().getScale().y, it->getOwner()->GetTransform().getScale().z);
 		m_shaderProg.setUniform("MVP", Pipeline::getTransformationMatrix2D());
 		m_shaderProg.setUniform("V", glm::mat4(1.0));
 		m_shaderProg.setUniform("P", glm::mat4(1.0));
 		m_shaderProg.setUniform("FullBright", 1);
 		break;
 	case RENDER_MODE_3D:
-		Pipeline::scale(it->getOwner()->GetTransform()->getScale().x, it->getOwner()->GetTransform()->getScale().y, it->getOwner()->GetTransform()->getScale().z);
+		Pipeline::scale(it->getOwner()->GetTransform().getScale().x, it->getOwner()->GetTransform().getScale().y, it->getOwner()->GetTransform().getScale().z);
 		m_shaderProg.setUniform("MVP", Pipeline::getTransformationMatrix());
 
 		m_shaderProg.setUniform("V", Pipeline::m_view);
@@ -352,12 +351,10 @@ void SGraphics::rebuildCache()
 	auto it = entityList.begin();
 	while (it != entityList.end())
 	{
-		std::vector<Component*> cList = (*it).second->getComponentsByType("Graphics");
-		auto CIterator = cList.begin();
-		while (CIterator != cList.end())
+		CGraphics* c = static_cast<CGraphics*>((*it).second->getComponent<CGraphics>());
+		if (c != nullptr)
 		{
-			CGraphicsCache.push_back(static_cast<CGraphics*>(*CIterator));	//Add component to cache
-			++CIterator;
+			CGraphicsCache.push_back(c);	//Add component to cache
 		}
 		++it;
 	}

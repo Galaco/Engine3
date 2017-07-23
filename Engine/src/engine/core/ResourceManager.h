@@ -21,7 +21,7 @@ Description: The store for all loaded models, animations, textures,
 #include <filesystem/AnimationLoader.h>
 
 #include <resources/BaseAnimation.h>
-#include <IResource.h>
+#include <resources/IResource.h>
 #include <resources/Texture.h>
 #include <resources/Model.h>
 #include <resources/Shader.h>

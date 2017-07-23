@@ -5,7 +5,6 @@ CGraphics::CGraphics()
 	m_pModel = nullptr;
 	m_pPointlight = nullptr;
 	m_pText = nullptr;
-	m_type = "Graphics";
 
 	m_renderMode = RENDER_MODE_3D;
 }
@@ -44,7 +43,7 @@ void CGraphics::addModel(const char* dir, bool buildCollisions, float cubeSize, 
 		);
 		collision->setCollisionBox(boundingBox);
 		collision->dynamic = dynamic;
-		m_entity->addComponent(collision, "Collision");
+		m_owner->addComponent(collision);
 	}
 	
 }

@@ -13,7 +13,7 @@ Description: Contains a list of meshes, textures and joints.
 
 #include <core/Logger.h>
 
-#include <IResource.h>
+#include <resources/IResource.h>
 #include "Texture.h"
 
 #include <resources/Mesh.h>

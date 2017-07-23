@@ -45,7 +45,7 @@ void SAnimation::update(float dt){
 
 void SAnimation::updateAnimation(CAnimation* anim, CGraphics* model, float dt){
 	MD5Animation* c = static_cast<MD5Animation*>(anim->getAnimation());
-	Entity* e = anim->getOwner();
+	IEntity* e = anim->getOwner();
 	if (model->getModel() != nullptr){
 		c->update(dt);
 		const MD5Animation::FrameSkeleton& skeleton = c->getSkeleton();
@@ -97,12 +97,14 @@ void SAnimation::rebuildCache()
 	auto it = entityList.begin();
 	while (it != entityList.end())
 	{
-		std::vector<Component*> cList = (*it).second->getComponentsByType("Animation");
-		auto CIterator = cList.begin();
-		while (CIterator != cList.end())
+		CAnimation* a = static_cast<CAnimation*>((*it).second->getComponent<CAnimation>());
+		if (a != nullptr)
 		{
-			CGraphicsCAnimationCache[static_cast<CAnimation*>(*CIterator)] = static_cast<CGraphics*>((*CIterator)->getOwner()->getComponent("Graphics"));	//Add graphics to animation cache
-			++CIterator;
+			CGraphics* c = static_cast<CGraphics*>((*it).second->getOwner()->getComponent<CGraphics>());
+			if (c != nullptr)
+			{
+				CGraphicsCAnimationCache[a] = c;	//Add component to cache
+			}
 		}
 		++it;
 	}

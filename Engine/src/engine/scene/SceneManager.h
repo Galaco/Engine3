@@ -15,7 +15,7 @@ Description: Responsible for handling what state is the current state.
 #include <map>
 
 #include <scene/Scene.h>
-#include <System.h>
+#include <system/System.h>
 
 class SceneManager {
 public:

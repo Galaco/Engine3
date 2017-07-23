@@ -19,8 +19,8 @@ Description: The core engine. Handles very low level functions such
 #include <vector>
 
 #include <SFML/System.hpp>
-#include <ISystem.h>
-#include "System.h"
+#include <system/ISystem.h>
+#include <system/System.h>
 
 #include <core/helpers/Config.h>
 #include <core/Input.h>

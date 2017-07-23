@@ -1,7 +1,7 @@
 #ifndef BASEANIMATION_H
 #define BASEANIMATION_H
 
-#include <IResource.h>
+#include <resources/IResource.h>
 #include <vector>
 #include <string>
 

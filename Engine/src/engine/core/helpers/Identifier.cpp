@@ -1,7 +1,7 @@
 #include "Identifier.h"
 
 int Identifier::m_nextId = 0;
-std::map<std::string, int> Identifier::m_manualList;
+std::map<const char*, int> Identifier::m_manualList;
 
 Identifier::Identifier(){  
      
@@ -11,16 +11,16 @@ Identifier::~Identifier(){
     
 }
 
-std::string Identifier::gen(){
+const char* Identifier::gen(){
 	//Generates a unique id for any object that asks. Format is Unique_x where x is a number
     std::string s = "Unique_"+ std::to_string(m_nextId);
     ++m_nextId;
     
-    m_id = s;
+    m_id = s.c_str();
     return m_id;
 }
 
-std::string Identifier::gen(const char* id ){
+const char* Identifier::gen(const char* id ){
 	//If a custom name requested, use that if it is available.
    /* if (m_manualList.find(std::string(id)) != m_manualList.end()) {
 		m_manualList[id] += 1;
@@ -33,10 +33,10 @@ std::string Identifier::gen(const char* id ){
 		m_id = std::string(id);
     }*/
 	m_manualList[id] = 1;
-	m_id = std::string(id);
+	m_id = id;
     return m_id;
 }
 
-std::string Identifier::get(){
+const char* Identifier::get(){
     return m_id;
 }

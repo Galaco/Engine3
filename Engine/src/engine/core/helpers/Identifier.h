@@ -9,7 +9,6 @@ Description: Generates unique entity Ids where an id has not been
 #ifndef IDENTIFIER_H
 #define IDENTIFIER_H
 
-#include <string>
 #include <map>
 
 #include <core/Logger.h>
@@ -20,15 +19,15 @@ public:
 	Identifier();
 	~Identifier();
         
-        std::string gen();
-        std::string gen(const char*);
+        const char* gen();
+		const char* gen(const char*);
         
-        std::string get();
+		const char* get();
 
 private:
     static int m_nextId;
-    static std::map<std::string, int> m_manualList;
+    static std::map<const char*, int> m_manualList;
     
-    std::string m_id;
+	const char* m_id;
 };
 #endif

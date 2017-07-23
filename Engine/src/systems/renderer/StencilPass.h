@@ -11,7 +11,7 @@ Description: An addition to the lightpass. Responsible for fixing
 
 #include <glad/glad.h>
 #include <core/helpers/Pipeline.h>
-#include <core/Entity.h>
+#include <entity/Entity.h>
 #include <resources/PointLight.h>
 
 #include "DeferredPass.h"

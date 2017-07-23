@@ -9,9 +9,9 @@ Description: Holds information on whether an object has been selected
 #ifndef CSELECTABLE_H
 #define CSELECTABLE_H
 
-#include <components/Component.h>
+#include <entity/IComponent.h>
 
-class CSelectable: public Component {
+class CSelectable: public IComponent {
 public:
 	CSelectable();
 	~CSelectable();

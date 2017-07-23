@@ -14,7 +14,7 @@ Description: Representation of the players view.
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/rotate_vector.hpp>
 
-#include <core/Entity.h>
+#include <entity/Entity.h>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 

@@ -60,3 +60,9 @@ Engine/\.vs/Engine/v15/\.suo
 *.db
 
 *.suo
+
+/Engine/assets/
+/Engine/binaries/
+/Engine/config/
+/Engine/scenes/
+/Engine/scripts/

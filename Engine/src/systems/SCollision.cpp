@@ -176,16 +176,17 @@ void SCollision::rebuildCache()
 	auto it = entityList.begin();
 	while (it != entityList.end())
 	{
-		std::vector<Component*> cList = (*it).second->getComponentsByType("Collision");
-		auto CIterator = cList.begin();
-		while (CIterator != cList.end())
+		CCollision* a = static_cast<CCollision*>((*it).second->getComponent<CCollision>());
+		if (a != nullptr)
 		{
-			CCollisionCTransformCache[static_cast<CCollision*>(*CIterator)] = (*CIterator)->getOwner()->GetTransform();
-			if ((static_cast<CCollision*>(*CIterator))->dynamic)
+			if (a->dynamic)
 			{
-				DynamicCCollisionCTransformCache[static_cast<CCollision*>(*CIterator)] = (*CIterator)->getOwner()->GetTransform();	//Add transform to collision map cache
+				CCollisionCTransformCache[a] = &a->getOwner()->GetTransform();
 			}
-			++CIterator;
+			else
+			{
+				DynamicCCollisionCTransformCache[a] = &a->getOwner()->GetTransform();
+			}
 		}
 		++it;
 	}

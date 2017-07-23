@@ -25,7 +25,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -88,7 +88,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>assimp.lib;lib_json.lib;opengl32.lib;glfw3dll.lib;sfml-graphics-s.lib;sfml-system-s.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)/libraries/SFML/lib;$(SolutionDir)/libraries/GLFW/lib;$(SolutionDir)/libraries/jsoncpp/lib;$(SolutionDir)/libraries/assimp/lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)/Engine/libraries/SFML/lib;$(SolutionDir)/Engine/libraries/GLFW/lib;$(SolutionDir)/Engine/libraries/jsoncpp/lib;$(SolutionDir)/Engine/libraries/assimp/lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -96,9 +96,6 @@
     <ClInclude Include="src\components\CCollision.h" />
     <ClInclude Include="src\components\CGraphics.h" />
     <ClInclude Include="src\components\CSelectable.h" />
-    <ClInclude Include="src\engine\components\Component.h" />
-    <ClInclude Include="src\engine\components\CTransform.h" />
-    <ClInclude Include="src\engine\core\Entity.h" />
     <ClInclude Include="src\engine\core\EventManager.h" />
     <ClInclude Include="src\engine\core\helpers\Config.h" />
     <ClInclude Include="src\engine\core\helpers\Identifier.h" />
@@ -109,6 +106,13 @@
     <ClInclude Include="src\engine\core\Logger.h" />
     <ClInclude Include="src\engine\core\ResourceManager.h" />
     <ClInclude Include="src\engine\Engine.h" />
+    <ClInclude Include="src\engine\entity\components\CTransform.h" />
+    <ClInclude Include="src\engine\entity\Entity.h" />
+    <ClInclude Include="src\engine\entity\IComponent.h" />
+    <ClInclude Include="src\engine\entity\IComponentContainer.h" />
+    <ClInclude Include="src\engine\entity\IEntity.h" />
+    <ClInclude Include="src\engine\entity\IOwnership.h" />
+    <ClInclude Include="src\engine\entity\IUniqueIdentifier.h" />
     <ClInclude Include="src\engine\filesystem\AnimationLoader.h" />
     <ClInclude Include="src\engine\filesystem\FileTypeLoader.h" />
     <ClInclude Include="src\engine\filesystem\Md5Loader.h" />
@@ -119,10 +123,7 @@
     <ClInclude Include="src\engine\graphics\Camera.h" />
     <ClInclude Include="src\engine\graphics\window\GLFWWindow.h" />
     <ClInclude Include="src\engine\graphics\window\QtWindow.h" />
-    <ClInclude Include="src\engine\IComponent.h" />
-    <ClInclude Include="src\engine\ISystem.h" />
     <ClInclude Include="src\engine\math\Vec3.h" />
-    <ClInclude Include="src\engine\IResource.h" />
     <ClInclude Include="src\engine\resources\BaseAnimation.h" />
     <ClInclude Include="src\engine\resources\CollisionBoxes.h" />
     <ClInclude Include="src\engine\resources\DirectionalLight.h" />
@@ -138,7 +139,8 @@
     <ClInclude Include="src\engine\scene\Scene.h" />
     <ClInclude Include="src\engine\scene\SceneManager.h" />
     <ClInclude Include="src\engine\scene\states\SplashState.h" />
-    <ClInclude Include="src\engine\System.h" />
+    <ClInclude Include="src\engine\system\ISystem.h" />
+    <ClInclude Include="src\engine\system\System.h" />
     <ClInclude Include="src\Game.h" />
     <ClInclude Include="src\systems\SAnimation.h" />
     <ClInclude Include="src\systems\SCollision.h" />
@@ -150,9 +152,6 @@
     <ClCompile Include="src\components\CCollision.cpp" />
     <ClCompile Include="src\components\CGraphics.cpp" />
     <ClCompile Include="src\components\CSelectable.cpp" />
-    <ClCompile Include="src\engine\components\Component.cpp" />
-    <ClCompile Include="src\engine\components\CTransform.cpp" />
-    <ClCompile Include="src\engine\core\Entity.cpp" />
     <ClCompile Include="src\engine\core\EventManager.cpp" />
     <ClCompile Include="src\engine\core\helpers\Config.cpp" />
     <ClCompile Include="src\engine\core\helpers\Identifier.cpp" />
@@ -163,6 +162,8 @@
     <ClCompile Include="src\engine\core\Logger.cpp" />
     <ClCompile Include="src\engine\core\ResourceManager.cpp" />
     <ClCompile Include="src\engine\Engine.cpp" />
+    <ClCompile Include="src\engine\entity\components\CTransform.cpp" />
+    <ClCompile Include="src\engine\entity\Entity.cpp" />
     <ClCompile Include="src\engine\filesystem\AnimationLoader.cpp" />
     <ClCompile Include="src\engine\filesystem\FileTypeLoader.cpp" />
     <ClCompile Include="src\engine\filesystem\Md5Loader.cpp" />
@@ -187,7 +188,7 @@
     <ClCompile Include="src\engine\scene\Scene.cpp" />
     <ClCompile Include="src\engine\scene\SceneManager.cpp" />
     <ClCompile Include="src\engine\scene\states\SplashState.cpp" />
-    <ClCompile Include="src\engine\System.cpp" />
+    <ClCompile Include="src\engine\system\System.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\systems\SAnimation.cpp" />

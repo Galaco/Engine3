@@ -11,11 +11,11 @@ Description: System that updates animations on objects each frame.
 #include <map>
 #include <vector>
 
-#include <ISystem.h>
+#include <system/ISystem.h>
 
 
 
-#include <System.h>
+#include <system/System.h>
 
 #include <resources/Mesh.h>
 #include <resources/MD5Animation.h>

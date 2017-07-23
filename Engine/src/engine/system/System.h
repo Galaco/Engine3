@@ -16,7 +16,7 @@ Description: Abstract System class of the component-system
 #include "scene/Scene.h"
 
 
-#include <core/Entity.h>
+#include <entity/Entity.h>
 
 class System {
 public:

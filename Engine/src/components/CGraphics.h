@@ -12,7 +12,7 @@ Description: Stores renderable data for use with the render system
 #define RENDER_MODE_3D 1
 
 
-#include <components/Component.h>
+#include <entity/IComponent.h>
 #include <resources/Model.h>
 #include <resources/PointLight.h>
 #include <resources/Text.h>
@@ -22,7 +22,7 @@ Description: Stores renderable data for use with the render system
 #include <resources/Material.h>
 #include "CCollision.h"
 
-class CGraphics: public Component {
+class CGraphics: public IComponent {
 public:
 	CGraphics();
 	~CGraphics();

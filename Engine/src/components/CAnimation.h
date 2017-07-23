@@ -8,10 +8,10 @@ Description: Holds animation data for AnimationSystem
 #ifndef CANIMATION_H
 #define CANIMATION_H
 
-#include <components/Component.h>
+#include <entity/IComponent.h>
 #include <resources/BaseAnimation.h>
 
-class CAnimation: public Component {
+class CAnimation: public IComponent {
 public:
 	CAnimation();
 	CAnimation(BaseAnimation* animation);

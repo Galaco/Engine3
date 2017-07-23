@@ -12,8 +12,8 @@ Description: System that handles and processes collisions
 #include <vector>
 #include <math.h>
 
-#include <ISystem.h>
-#include <System.h>
+#include <system/ISystem.h>
+#include <system/System.h>
 
 
 #include <core/helpers/Mouse.h>

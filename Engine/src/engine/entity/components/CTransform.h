@@ -9,11 +9,11 @@ Description: Requirement of all gameobjects. Stores Position,
 #ifndef CTRANSFORM_H
 #define CTRANSFORM_H
 
-#include <components/Component.h>
+#include <entity/IComponent.h>
 
 #include <glm/glm.hpp>
 
-class CTransform: public Component {
+class CTransform: public IComponent {
 public:
 	CTransform();
 	CTransform(glm::vec3 pos, glm::vec3 rot);

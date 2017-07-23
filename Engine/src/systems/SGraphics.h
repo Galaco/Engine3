@@ -24,13 +24,13 @@ Description: Responsible for rendering all objects to screen. Uses a
 #error No window library specified
 #endif
 
-#include <ISystem.h>
+#include <system/ISystem.h>
 
 
 #include <core/helpers/Config.h>
 #include <core/ResourceManager.h>
 
-#include <System.h>
+#include <system/System.h>
 
 #include <graphics/Camera.h>
 #include <resources/PointLight.h>
@@ -80,7 +80,7 @@ private:
 	void rebuildCache();
 
 	static ResourceManager m_Resources;
-	static std::vector<CGraphics*> CGraphicsCache;
+	std::vector<CGraphics*> CGraphicsCache;
 	static CShaderProgram	m_shaderProg;
 	static CShader m_shader[3];
 	static GLuint shadowFBO, pass1Index, pass2Index;

@@ -128,21 +128,21 @@ bool Scene::load(std::string filename)
 			const Json::Value& transform = it->get("transform", 0);
 			if (transform != 0)
 			{
-				camera->GetTransform()->setPosition(
+				camera->GetTransform().setPosition(
 					glm::vec3(
 					transform.get("pX", 0).asDouble(),
 					transform.get("pY", 0).asDouble(),
 					transform.get("pZ", 0).asDouble()
 					)
 					);
-				camera->GetTransform()->setOrientation(
+				camera->GetTransform().setOrientation(
 					glm::vec3(
 					transform.get("rX", 0).asDouble(),
 					transform.get("rY", 0).asDouble(),
 					transform.get("rZ", 0).asDouble()
 					)
 					);
-				camera->GetTransform()->setScale(
+				camera->GetTransform().setScale(
 					glm::vec3(
 					transform.get("sX", 0).asDouble(),
 					transform.get("sY", 0).asDouble(),
@@ -180,21 +180,21 @@ bool Scene::load(std::string filename)
 			const Json::Value& transform = it->get("transform", 0);
 			if (transform != 0)
 			{
-				entity->GetTransform()->setPosition(
+				entity->GetTransform().setPosition(
 					glm::vec3(
 					transform.get("pX", 0).asDouble(),
 					transform.get("pY", 0).asDouble(),
 					transform.get("pZ", 0).asDouble()
 					)
 					);
-				entity->GetTransform()->setOrientation(
+				entity->GetTransform().setOrientation(
 					glm::vec3(
 					transform.get("rX", 0).asDouble(),
 					transform.get("rY", 0).asDouble(),
 					transform.get("rZ", 0).asDouble()
 					)
 					);
-				entity->GetTransform()->setScale(
+				entity->GetTransform().setScale(
 					glm::vec3(
 					transform.get("sX", 1).asDouble(),
 					transform.get("sY", 1).asDouble(),
@@ -237,7 +237,7 @@ bool Scene::load(std::string filename)
 					{
 						g->addMaterial(material.asCString());
 					}
-					entity->addComponent(g, "Graphics");
+					entity->addComponent(g);
 					g->setOwner(entity);
 				}
 			}

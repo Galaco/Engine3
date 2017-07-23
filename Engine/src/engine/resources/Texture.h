@@ -14,7 +14,7 @@ Todo: Material data implementation
 #include <SFML/Graphics.hpp>
 #include <GLFW/glfw3.h>
 
-#include <IResource.h>
+#include <resources/IResource.h>
 
 class Texture : public IResource
 {
