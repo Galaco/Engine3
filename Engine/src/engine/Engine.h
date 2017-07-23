@@ -20,11 +20,15 @@ Description: The core engine. Handles very low level functions such
 
 #include <SFML/System.hpp>
 #include <system/ISystem.h>
+#include <input/IInputListener.h>
+
 #include <system/System.h>
 
-#include <core/helpers/Config.h>
-#include <core/Input.h>
+#include <filesystem/Config.h>
 #include <core/Logger.h>
+
+#include <scene/SceneManager.h>
+#include <scene/states/SplashState.h>
 
 
 class Engine {
@@ -34,21 +38,25 @@ public:
 
 	bool initialize();
 
+	void start();
+
 	void update();
 
 
 	void RegisterSystem(ISystem* system);
+	void RegisterInputListener(IInputListener* listener);
 
 	
 private:
 	std::vector<ISystem*> m_systems;
-
-    Input m_pInput;
+	IInputListener* m_inputListener;
 
     Config  m_config;
-
+	SceneManager m_sceneManager;
 
 	double m_elapsedTime, m_frameTime;
 	sf::Clock m_clock;
+
+	bool m_isRunning;
 };
 #endif

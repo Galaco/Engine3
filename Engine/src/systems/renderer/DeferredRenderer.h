@@ -11,7 +11,7 @@ Description: Responsible for setting up and handling the display each
 
 #include <glad/glad.h>
 
-#include <core/helpers/Config.h>
+#include <filesystem/Config.h>
 #include <core/Logger.h>
 
 #include <resources/Shader.h>

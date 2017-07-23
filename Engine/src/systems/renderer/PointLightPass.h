@@ -11,7 +11,7 @@ Description: Sets up the point light shaders, and render data for all
 
 #include <glad/glad.h>
 
-#include <core/helpers/Pipeline.h>
+#include <graphics/Pipeline.h>
 #include <entity/Entity.h>
 #include <resources/PointLight.h>
 

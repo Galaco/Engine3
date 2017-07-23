@@ -10,6 +10,7 @@ Description: Generates unique entity Ids where an id has not been
 #define IDENTIFIER_H
 
 #include <map>
+#include <string>
 
 #include <core/Logger.h>
 

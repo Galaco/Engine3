@@ -18,9 +18,9 @@ Description: Representation of the players view.
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-#include <core/helpers/Config.h>
-#include <core/helpers/Mouse.h>
-#include <core/helpers/Pipeline.h>
+#include <filesystem/Config.h>
+#include <input/Mouse.h>
+#include <graphics/Pipeline.h>
 
 #include <resources/Skybox.h>
 enum CameraMode{

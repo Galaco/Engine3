@@ -45,11 +45,9 @@ void Logger::log(e_priority priority, const char* msg){
 
 //Log to file
 void Logger::write(const char* msg){
-	if (Config::_DEBUGLEVEL > 0)
-	{
+#ifndef NDEBUG
 		m_file.open("test.txt", std::fstream::in | std::fstream::out | std::fstream::app);
 
 		m_file << msg << "\n";
-	}
-
+#endif
 }

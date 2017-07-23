@@ -11,7 +11,7 @@ Description: Renders the directional light(s?) stored in the current
 
 #include <glad/glad.h>
 
-#include <core/helpers/Pipeline.h>
+#include <graphics/Pipeline.h>
 #include <resources/Mesh.h>
 #include <resources/DirectionalLight.h>
 #include "DeferredPass.h"

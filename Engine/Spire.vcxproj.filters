@@ -43,12 +43,6 @@
     <Filter Include="Source Files\engine\core">
       <UniqueIdentifier>{e068766c-89e3-4861-a34e-28938b1e3fd0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\engine\core\helpers">
-      <UniqueIdentifier>{f698c092-5151-4f14-bc66-b7ca679bc0ed}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\engine\core\helpers">
-      <UniqueIdentifier>{f78aea46-0410-4185-ad90-c1f79a46666c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\engine\filesystem">
       <UniqueIdentifier>{ae0f0a4f-a4bb-4c8f-814f-41e272f18d5f}</UniqueIdentifier>
     </Filter>
@@ -109,6 +103,12 @@
     <Filter Include="Source Files\engine\entity\components">
       <UniqueIdentifier>{b7b5e440-868a-419d-a454-e27e4b5c945d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\engine\input">
+      <UniqueIdentifier>{fb9ae526-1743-46be-a933-2f4ad89ddf95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\input">
+      <UniqueIdentifier>{2a717568-c3ee-426e-bf61-dd9550362c2e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Game.h">
@@ -141,29 +141,11 @@
     <ClInclude Include="src\engine\core\EventManager.h">
       <Filter>Header Files\engine\core</Filter>
     </ClInclude>
-    <ClInclude Include="src\engine\core\Input.h">
-      <Filter>Header Files\engine\core</Filter>
-    </ClInclude>
     <ClInclude Include="src\engine\core\Logger.h">
       <Filter>Header Files\engine\core</Filter>
     </ClInclude>
     <ClInclude Include="src\engine\core\ResourceManager.h">
       <Filter>Header Files\engine\core</Filter>
-    </ClInclude>
-    <ClInclude Include="src\engine\core\helpers\Config.h">
-      <Filter>Header Files\engine\core\helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="src\engine\core\helpers\Identifier.h">
-      <Filter>Header Files\engine\core\helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="src\engine\core\helpers\Keyboard.h">
-      <Filter>Header Files\engine\core\helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="src\engine\core\helpers\Mouse.h">
-      <Filter>Header Files\engine\core\helpers</Filter>
-    </ClInclude>
-    <ClInclude Include="src\engine\core\helpers\Pipeline.h">
-      <Filter>Header Files\engine\core\helpers</Filter>
     </ClInclude>
     <ClInclude Include="src\engine\filesystem\AnimationLoader.h">
       <Filter>Header Files\engine\filesystem</Filter>
@@ -270,6 +252,27 @@
     <ClInclude Include="src\engine\entity\IUniqueIdentifier.h">
       <Filter>Header Files\engine\entity</Filter>
     </ClInclude>
+    <ClInclude Include="src\engine\filesystem\Config.h">
+      <Filter>Header Files\engine\filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\input\Keyboard.h">
+      <Filter>Header Files\engine\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\input\Mouse.h">
+      <Filter>Header Files\engine\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\graphics\Pipeline.h">
+      <Filter>Header Files\engine\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\core\Identifier.h">
+      <Filter>Header Files\engine\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\input\InputListener.h">
+      <Filter>Header Files\engine\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\input\IInputListener.h">
+      <Filter>Header Files\engine\input</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Game.cpp">
@@ -308,29 +311,11 @@
     <ClCompile Include="src\engine\core\EventManager.cpp">
       <Filter>Source Files\engine\core</Filter>
     </ClCompile>
-    <ClCompile Include="src\engine\core\Input.cpp">
-      <Filter>Source Files\engine\core</Filter>
-    </ClCompile>
     <ClCompile Include="src\engine\core\Logger.cpp">
       <Filter>Source Files\engine\core</Filter>
     </ClCompile>
     <ClCompile Include="src\engine\core\ResourceManager.cpp">
       <Filter>Source Files\engine\core</Filter>
-    </ClCompile>
-    <ClCompile Include="src\engine\core\helpers\Config.cpp">
-      <Filter>Source Files\engine\core\helpers</Filter>
-    </ClCompile>
-    <ClCompile Include="src\engine\core\helpers\Identifier.cpp">
-      <Filter>Source Files\engine\core\helpers</Filter>
-    </ClCompile>
-    <ClCompile Include="src\engine\core\helpers\Keyboard.cpp">
-      <Filter>Source Files\engine\core\helpers</Filter>
-    </ClCompile>
-    <ClCompile Include="src\engine\core\helpers\Mouse.cpp">
-      <Filter>Source Files\engine\core\helpers</Filter>
-    </ClCompile>
-    <ClCompile Include="src\engine\core\helpers\Pipeline.cpp">
-      <Filter>Source Files\engine\core\helpers</Filter>
     </ClCompile>
     <ClCompile Include="src\engine\filesystem\AnimationLoader.cpp">
       <Filter>Source Files\engine\filesystem</Filter>
@@ -412,6 +397,24 @@
     </ClCompile>
     <ClCompile Include="src\engine\entity\components\CTransform.cpp">
       <Filter>Source Files\engine\entity\components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\filesystem\Config.cpp">
+      <Filter>Source Files\engine\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\input\Keyboard.cpp">
+      <Filter>Source Files\engine\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\input\Mouse.cpp">
+      <Filter>Source Files\engine\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\graphics\Pipeline.cpp">
+      <Filter>Source Files\engine\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\core\Identifier.cpp">
+      <Filter>Source Files\engine\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\input\InputListener.cpp">
+      <Filter>Source Files\engine\input</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

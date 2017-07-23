@@ -1,7 +1,7 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
-#include <core/BaseWindow.h>
+#include <graphics/BaseWindow.h>
 #include <QtGui/QWindow>
 #include <QtGui/QOpenGLFunctions>
 

@@ -20,7 +20,7 @@ Description: Represents a skybox in the world. Is self contained due
 #include <SFML/Graphics.hpp>
 
 #include "Shader.h"
-#include <core/helpers/Pipeline.h>
+#include <graphics/Pipeline.h>
 
 class Skybox {
 public:

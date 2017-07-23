@@ -1,7 +1,7 @@
 #ifndef IUNIQUEIDENTIFIER_H
 #define IUNIQUEIDENTIFIER_H
 
-#include <core/helpers/Identifier.h>
+#include <core/Identifier.h>
 
 
 class IUniqueIdentifier

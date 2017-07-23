@@ -27,7 +27,7 @@ Description: Responsible for rendering all objects to screen. Uses a
 #include <system/ISystem.h>
 
 
-#include <core/helpers/Config.h>
+#include <filesystem/Config.h>
 #include <core/ResourceManager.h>
 
 #include <system/System.h>
@@ -36,7 +36,7 @@ Description: Responsible for rendering all objects to screen. Uses a
 #include <resources/PointLight.h>
 #include <resources/Shader.h>
 
-#include <core/helpers/Pipeline.h>
+#include <graphics/Pipeline.h>
 
 
 #include "../components/CGraphics.h"

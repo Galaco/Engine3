@@ -10,7 +10,7 @@ Description: An addition to the deferred pass. Used to render
 
 #include <glad/glad.h>
 
-#include <core/helpers/Pipeline.h>
+#include <graphics/Pipeline.h>
 
 #include "DeferredPass.h"
 

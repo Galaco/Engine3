@@ -13,7 +13,7 @@ Description: Sets up and renders all geometry data to the screen.
 
 #include "DeferredPass.h"
 
-#include <core/helpers/Pipeline.h>
+#include <graphics/Pipeline.h>
 
 class GeometryPass: public DeferredPass{
 public:

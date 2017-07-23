@@ -10,7 +10,7 @@ Description: An addition to the lightpass. Responsible for fixing
 #define STENCILPASS_H
 
 #include <glad/glad.h>
-#include <core/helpers/Pipeline.h>
+#include <graphics/Pipeline.h>
 #include <entity/Entity.h>
 #include <resources/PointLight.h>
 

@@ -1,6 +1,6 @@
 #include "Camera.h"
 
-#include <core/helpers/Keyboard.h>
+#include <input/Keyboard.h>
 
 #define PI 3.14159265359
 #define TO_RAD(x) (x*(PI/180))

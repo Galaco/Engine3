@@ -16,7 +16,7 @@ Description: System that handles and processes collisions
 #include <system/System.h>
 
 
-#include <core/helpers/Mouse.h>
+#include <input/Mouse.h>
 
 #include "../components/CCollision.h"
 #include "../components/CSelectable.h"

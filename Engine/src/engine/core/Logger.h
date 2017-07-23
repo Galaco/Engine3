@@ -12,7 +12,6 @@ Description: Low level logging class. Outputs to console with
 #include <windows.h>
 #include <iostream>
 #include <fstream>
-#include <core/helpers/Config.h>
 
 enum e_priority{
 	FATAL = 0,

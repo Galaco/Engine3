@@ -11,7 +11,7 @@ Description: Abstract pass for the deferred renderer. All passes
 
 #include <glad/glad.h>
 
-#include <core/helpers/Config.h>
+#include <filesystem/Config.h>
 #include <core/Logger.h>
 
 #include <resources/Shader.h>

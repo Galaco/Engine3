@@ -9,6 +9,8 @@ Engine::Engine() {
 	else {
 		Logger::log(WARNING, "Configuration: Failed to load 'data/core/base.cfg'. Using defaults.");
 	}
+	m_elapsedTime = 0.f;
+	m_isRunning = false;
 }
 
 Engine::~Engine(){
@@ -21,24 +23,26 @@ Engine::~Engine(){
 bool Engine::initialize(){
 	Logger::log(INFO, "Engine start");
 
-	for (std::vector<ISystem*>::iterator it = this->m_systems.begin(); it != this->m_systems.end(); ++it)
-	{
-		(*it)->Initialise();
-	}
+	m_sceneManager.initialize();
 
-	//if(!m_pWindow->isValid()) return false;
-	//m_pInput.initialize(m_pWindow->getContext());
+	//remove me
+	SplashState* s = new SplashState;
+	m_sceneManager.addState(s, "Splash");//Push splash to state manager
 
 	Logger::log(INFO, "Finished engine initialisations\n");
 
 
-	//Run initialize script to create a game
-	//LuaScript* l = m_sScript.createScript();
-	//l->runFile("init.lua");
-	//m_sScript.deleteScript(l);	//script no longer needed. Delete
-
-
 	return true;
+}
+
+void Engine::start()
+{
+	m_isRunning = true;
+
+	while (m_isRunning == true)
+	{
+		this->update();
+	}
 }
 
 void Engine::update(){
@@ -57,6 +61,7 @@ void Engine::update(){
 		}
 
 		System::FixedUpdateRemoveMe();
+		m_sceneManager.update((float)m_frameTime); //Update scenes
 	}
 
 	//Fixed Update
@@ -69,5 +74,13 @@ void Engine::update(){
 
 void Engine::RegisterSystem(ISystem* system)
 {
+	system->Initialise();
 	this->m_systems.push_back(system);
+}
+
+
+
+void Engine::RegisterInputListener(IInputListener* listener)
+{
+	m_inputListener = listener;
 }
