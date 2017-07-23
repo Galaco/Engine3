@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\components">
+      <UniqueIdentifier>{6c3ff3e3-41b8-4c21-9732-a333f04279f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\systems">
+      <UniqueIdentifier>{8a8bdde7-5283-4266-bc05-e37220011ce0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\components">
+      <UniqueIdentifier>{4b327f92-dc13-4627-9b7f-89834117dbcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\systems">
+      <UniqueIdentifier>{2249ca74-3277-4260-88c0-3e1731cc22b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{d895b2f7-90df-4aea-b147-e863878fe447}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies">
+      <UniqueIdentifier>{cac2e650-a40b-4f7d-80d1-56dc05280637}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine">
+      <UniqueIdentifier>{f3996ea1-53ca-431a-8438-b2483d623436}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine">
+      <UniqueIdentifier>{060c8e7a-db0e-44db-a137-adfdd3c8c1c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\components">
+      <UniqueIdentifier>{00f08597-009b-4e5c-9ad9-9dc62001ffd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\components">
+      <UniqueIdentifier>{a587efc1-2204-4635-9bd9-2c9e4f5beec6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\core">
+      <UniqueIdentifier>{4bdc18b6-5715-44d6-bbc6-bad3e5ee6cf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\core">
+      <UniqueIdentifier>{e068766c-89e3-4861-a34e-28938b1e3fd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\core\helpers">
+      <UniqueIdentifier>{f698c092-5151-4f14-bc66-b7ca679bc0ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\core\helpers">
+      <UniqueIdentifier>{f78aea46-0410-4185-ad90-c1f79a46666c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\filesystem">
+      <UniqueIdentifier>{ae0f0a4f-a4bb-4c8f-814f-41e272f18d5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\filesystem">
+      <UniqueIdentifier>{692481a6-4953-4266-8851-d85cd8f6fa34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\graphics">
+      <UniqueIdentifier>{48f01160-aa7f-45de-854f-7f43e70aa0da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\graphics\window">
+      <UniqueIdentifier>{b8059105-9fd2-48c5-a914-6b90ac9e396a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\graphics">
+      <UniqueIdentifier>{46e15c42-ba1c-472f-a750-feaec62407fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\graphics\window">
+      <UniqueIdentifier>{cc466c15-f5f1-4e85-ab58-df141afb2898}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\math">
+      <UniqueIdentifier>{da6e9074-f7ec-4f84-8373-75b8859f64b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\math">
+      <UniqueIdentifier>{03a4f4a4-d34e-4a8e-9ad3-2bd288001156}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\resources">
+      <UniqueIdentifier>{38379615-b41f-4172-aa77-c5871c1f0204}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\scene">
+      <UniqueIdentifier>{b7e05662-b4cf-4314-a9da-c90696f63f4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\scene">
+      <UniqueIdentifier>{240e2886-b84d-4d0e-9e43-74c77291b196}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\scene\scene">
+      <UniqueIdentifier>{6e1dc2d4-74fc-498c-bc68-4362341b4f2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\resources">
+      <UniqueIdentifier>{dbcb454b-002e-49b8-be5a-c739e9c98c9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\scene\states">
+      <UniqueIdentifier>{70ff1bb4-c803-4e2d-9409-adfc2f1ab3c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\scene\states">
+      <UniqueIdentifier>{a445400d-e6de-433b-8363-a7828006fc0f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\components\CAnimation.h">
+      <Filter>Header Files\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\components\CGraphics.h">
+      <Filter>Header Files\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\systems\SAnimation.h">
+      <Filter>Header Files\systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\systems\SGraphics.h">
+      <Filter>Header Files\systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\components\CSelectable.h">
+      <Filter>Header Files\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\systems\SCollision.h">
+      <Filter>Header Files\systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\components\CCollision.h">
+      <Filter>Header Files\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\Engine.h">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\components\Component.h">
+      <Filter>Header Files\engine\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\components\CTransform.h">
+      <Filter>Header Files\engine\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\core\Entity.h">
+      <Filter>Header Files\engine\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\core\EventManager.h">
+      <Filter>Header Files\engine\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\core\Input.h">
+      <Filter>Header Files\engine\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\core\Logger.h">
+      <Filter>Header Files\engine\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\core\ResourceManager.h">
+      <Filter>Header Files\engine\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\core\helpers\Config.h">
+      <Filter>Header Files\engine\core\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\core\helpers\Identifier.h">
+      <Filter>Header Files\engine\core\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\core\helpers\Keyboard.h">
+      <Filter>Header Files\engine\core\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\core\helpers\Mouse.h">
+      <Filter>Header Files\engine\core\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\core\helpers\Pipeline.h">
+      <Filter>Header Files\engine\core\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\filesystem\AnimationLoader.h">
+      <Filter>Header Files\engine\filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\filesystem\FileTypeLoader.h">
+      <Filter>Header Files\engine\filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\filesystem\Md5Loader.h">
+      <Filter>Header Files\engine\filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\filesystem\ModelLoader.h">
+      <Filter>Header Files\engine\filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\filesystem\ObjLoader.h">
+      <Filter>Header Files\engine\filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\graphics\BaseWindow.h">
+      <Filter>Header Files\engine\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\graphics\Camera.h">
+      <Filter>Header Files\engine\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\graphics\window\GLFWWindow.h">
+      <Filter>Header Files\engine\graphics\window</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\graphics\window\QtWindow.h">
+      <Filter>Header Files\engine\graphics\window</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\math\Vec3.h">
+      <Filter>Header Files\engine\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\resources\BaseAnimation.h">
+      <Filter>Header Files\engine\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\resources\CollisionBoxes.h">
+      <Filter>Header Files\engine\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\resources\DirectionalLight.h">
+      <Filter>Header Files\engine\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\resources\Material.h">
+      <Filter>Header Files\engine\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\resources\MD5Animation.h">
+      <Filter>Header Files\engine\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\resources\Mesh.h">
+      <Filter>Header Files\engine\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\resources\Model.h">
+      <Filter>Header Files\engine\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\resources\PointLight.h">
+      <Filter>Header Files\engine\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\resources\Shader.h">
+      <Filter>Header Files\engine\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\resources\Skybox.h">
+      <Filter>Header Files\engine\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\resources\Text.h">
+      <Filter>Header Files\engine\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\resources\Texture.h">
+      <Filter>Header Files\engine\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\scene\Scene.h">
+      <Filter>Header Files\engine\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\scene\SceneManager.h">
+      <Filter>Header Files\engine\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\scene\states\SplashState.h">
+      <Filter>Header Files\engine\scene\states</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\System.h">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\filesystem\TextureLoader.h">
+      <Filter>Header Files\engine\filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\IComponent.h">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\ISystem.h">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\IResource.h">
+      <Filter>Header Files\engine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systems\SAnimation.cpp">
+      <Filter>Source Files\systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systems\SGraphics.cpp">
+      <Filter>Source Files\systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\components\CAnimation.cpp">
+      <Filter>Source Files\components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\components\CGraphics.cpp">
+      <Filter>Source Files\components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\components\CSelectable.cpp">
+      <Filter>Source Files\components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systems\SCollision.cpp">
+      <Filter>Source Files\systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\components\CCollision.cpp">
+      <Filter>Source Files\components</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\glad\src\glad.c">
+      <Filter>Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\Engine.cpp">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\components\Component.cpp">
+      <Filter>Source Files\engine\components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\components\CTransform.cpp">
+      <Filter>Source Files\engine\components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\core\Entity.cpp">
+      <Filter>Source Files\engine\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\core\EventManager.cpp">
+      <Filter>Source Files\engine\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\core\Input.cpp">
+      <Filter>Source Files\engine\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\core\Logger.cpp">
+      <Filter>Source Files\engine\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\core\ResourceManager.cpp">
+      <Filter>Source Files\engine\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\core\helpers\Config.cpp">
+      <Filter>Source Files\engine\core\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\core\helpers\Identifier.cpp">
+      <Filter>Source Files\engine\core\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\core\helpers\Keyboard.cpp">
+      <Filter>Source Files\engine\core\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\core\helpers\Mouse.cpp">
+      <Filter>Source Files\engine\core\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\core\helpers\Pipeline.cpp">
+      <Filter>Source Files\engine\core\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\filesystem\AnimationLoader.cpp">
+      <Filter>Source Files\engine\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\filesystem\FileTypeLoader.cpp">
+      <Filter>Source Files\engine\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\filesystem\Md5Loader.cpp">
+      <Filter>Source Files\engine\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\filesystem\ModelLoader.cpp">
+      <Filter>Source Files\engine\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\filesystem\ObjLoader.cpp">
+      <Filter>Source Files\engine\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\graphics\window\GLFWWindow.cpp">
+      <Filter>Source Files\engine\graphics\window</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\graphics\window\QtWindow.cpp">
+      <Filter>Source Files\engine\graphics\window</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\graphics\Camera.cpp">
+      <Filter>Source Files\engine\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\math\Vec3.cpp">
+      <Filter>Source Files\engine\math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\resources\BaseAnimation.cpp">
+      <Filter>Source Files\engine\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\resources\CollisionBoxes.cpp">
+      <Filter>Source Files\engine\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\resources\DirectionalLight.cpp">
+      <Filter>Source Files\engine\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\resources\Material.cpp">
+      <Filter>Source Files\engine\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\resources\MD5Animation.cpp">
+      <Filter>Source Files\engine\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\resources\Model.cpp">
+      <Filter>Source Files\engine\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\resources\PointLight.cpp">
+      <Filter>Source Files\engine\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\resources\Shader.cpp">
+      <Filter>Source Files\engine\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\resources\Skybox.cpp">
+      <Filter>Source Files\engine\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\resources\Text.cpp">
+      <Filter>Source Files\engine\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\resources\Texture.cpp">
+      <Filter>Source Files\engine\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\scene\Scene.cpp">
+      <Filter>Source Files\engine\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\scene\SceneManager.cpp">
+      <Filter>Source Files\engine\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\scene\states\SplashState.cpp">
+      <Filter>Source Files\engine\scene\states</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\System.cpp">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\filesystem\TextureLoader.cpp">
+      <Filter>Source Files\engine\filesystem</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="binaries\shaders\skybox.fs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="binaries\shaders\skybox.vs.glsl">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="binaries\shaders\shader.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="binaries\shaders\shader.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="binaries\shaders\shader.geom">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>

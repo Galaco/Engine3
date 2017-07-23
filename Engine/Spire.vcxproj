@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ED255728-27FE-4A3E-BC66-DB2F1E6E7956}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Spire</RootNamespace>
+    <ProjectName>Engine</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Engine\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Engine\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>SFML_STATIC;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;_LIB;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;USE_GLFW;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)/Engine/src;$(SolutionDir)/Engine/src/engine;$(SolutionDir)/Engine/libraries/SFML/include;$(SolutionDir)/Engine/libraries/GLFW/include;$(SolutionDir)/Engine/libraries/glad/include;$(SolutionDir)/Engine/libraries/glm/include;$(SolutionDir)/Engine/libraries/jsoncpp/include;$(SolutionDir)/Engine/libraries/assimp/include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtOpenGL</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)/Engine/libraries/SFML/lib;$(SolutionDir)/Engine/libraries/GLFW/lib;$(SolutionDir)/Engine/libraries/jsoncpp/lib;$(SolutionDir)/Engine/libraries/assimp/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>assimp.lib;lib_json-d.lib;opengl32.lib;glfw3dll.lib;sfml-system-s-d.lib;sfml-graphics-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>MSVCRT; LIBCMT;</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>;SFML_STATIC;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;_LIB;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;USE_GLFW;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)/Engine/src;$(SolutionDir)/Engine/src/engine;$(SolutionDir)/Engine/libraries/SFML/include;$(SolutionDir)/Engine/libraries/GLFW/include;$(SolutionDir)/Engine/libraries/glad/include;$(SolutionDir)/Engine/libraries/glm/include;$(SolutionDir)/Engine/libraries/jsoncpp/include;$(SolutionDir)/Engine/libraries/assimp/include;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtOpenGL</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>assimp.lib;lib_json.lib;opengl32.lib;glfw3dll.lib;sfml-graphics-s.lib;sfml-system-s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)/libraries/SFML/lib;$(SolutionDir)/libraries/GLFW/lib;$(SolutionDir)/libraries/jsoncpp/lib;$(SolutionDir)/libraries/assimp/lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\components\CAnimation.h" />
+    <ClInclude Include="src\components\CCollision.h" />
+    <ClInclude Include="src\components\CGraphics.h" />
+    <ClInclude Include="src\components\CSelectable.h" />
+    <ClInclude Include="src\engine\components\Component.h" />
+    <ClInclude Include="src\engine\components\CTransform.h" />
+    <ClInclude Include="src\engine\core\Entity.h" />
+    <ClInclude Include="src\engine\core\EventManager.h" />
+    <ClInclude Include="src\engine\core\helpers\Config.h" />
+    <ClInclude Include="src\engine\core\helpers\Identifier.h" />
+    <ClInclude Include="src\engine\core\helpers\Keyboard.h" />
+    <ClInclude Include="src\engine\core\helpers\Mouse.h" />
+    <ClInclude Include="src\engine\core\helpers\Pipeline.h" />
+    <ClInclude Include="src\engine\core\Input.h" />
+    <ClInclude Include="src\engine\core\Logger.h" />
+    <ClInclude Include="src\engine\core\ResourceManager.h" />
+    <ClInclude Include="src\engine\Engine.h" />
+    <ClInclude Include="src\engine\filesystem\AnimationLoader.h" />
+    <ClInclude Include="src\engine\filesystem\FileTypeLoader.h" />
+    <ClInclude Include="src\engine\filesystem\Md5Loader.h" />
+    <ClInclude Include="src\engine\filesystem\ModelLoader.h" />
+    <ClInclude Include="src\engine\filesystem\ObjLoader.h" />
+    <ClInclude Include="src\engine\filesystem\TextureLoader.h" />
+    <ClInclude Include="src\engine\graphics\BaseWindow.h" />
+    <ClInclude Include="src\engine\graphics\Camera.h" />
+    <ClInclude Include="src\engine\graphics\window\GLFWWindow.h" />
+    <ClInclude Include="src\engine\graphics\window\QtWindow.h" />
+    <ClInclude Include="src\engine\IComponent.h" />
+    <ClInclude Include="src\engine\ISystem.h" />
+    <ClInclude Include="src\engine\math\Vec3.h" />
+    <ClInclude Include="src\engine\IResource.h" />
+    <ClInclude Include="src\engine\resources\BaseAnimation.h" />
+    <ClInclude Include="src\engine\resources\CollisionBoxes.h" />
+    <ClInclude Include="src\engine\resources\DirectionalLight.h" />
+    <ClInclude Include="src\engine\resources\Material.h" />
+    <ClInclude Include="src\engine\resources\MD5Animation.h" />
+    <ClInclude Include="src\engine\resources\Mesh.h" />
+    <ClInclude Include="src\engine\resources\Model.h" />
+    <ClInclude Include="src\engine\resources\PointLight.h" />
+    <ClInclude Include="src\engine\resources\Shader.h" />
+    <ClInclude Include="src\engine\resources\Skybox.h" />
+    <ClInclude Include="src\engine\resources\Text.h" />
+    <ClInclude Include="src\engine\resources\Texture.h" />
+    <ClInclude Include="src\engine\scene\Scene.h" />
+    <ClInclude Include="src\engine\scene\SceneManager.h" />
+    <ClInclude Include="src\engine\scene\states\SplashState.h" />
+    <ClInclude Include="src\engine\System.h" />
+    <ClInclude Include="src\Game.h" />
+    <ClInclude Include="src\systems\SAnimation.h" />
+    <ClInclude Include="src\systems\SCollision.h" />
+    <ClInclude Include="src\systems\SGraphics.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libraries\glad\src\glad.c" />
+    <ClCompile Include="src\components\CAnimation.cpp" />
+    <ClCompile Include="src\components\CCollision.cpp" />
+    <ClCompile Include="src\components\CGraphics.cpp" />
+    <ClCompile Include="src\components\CSelectable.cpp" />
+    <ClCompile Include="src\engine\components\Component.cpp" />
+    <ClCompile Include="src\engine\components\CTransform.cpp" />
+    <ClCompile Include="src\engine\core\Entity.cpp" />
+    <ClCompile Include="src\engine\core\EventManager.cpp" />
+    <ClCompile Include="src\engine\core\helpers\Config.cpp" />
+    <ClCompile Include="src\engine\core\helpers\Identifier.cpp" />
+    <ClCompile Include="src\engine\core\helpers\Keyboard.cpp" />
+    <ClCompile Include="src\engine\core\helpers\Mouse.cpp" />
+    <ClCompile Include="src\engine\core\helpers\Pipeline.cpp" />
+    <ClCompile Include="src\engine\core\Input.cpp" />
+    <ClCompile Include="src\engine\core\Logger.cpp" />
+    <ClCompile Include="src\engine\core\ResourceManager.cpp" />
+    <ClCompile Include="src\engine\Engine.cpp" />
+    <ClCompile Include="src\engine\filesystem\AnimationLoader.cpp" />
+    <ClCompile Include="src\engine\filesystem\FileTypeLoader.cpp" />
+    <ClCompile Include="src\engine\filesystem\Md5Loader.cpp" />
+    <ClCompile Include="src\engine\filesystem\ModelLoader.cpp" />
+    <ClCompile Include="src\engine\filesystem\ObjLoader.cpp" />
+    <ClCompile Include="src\engine\filesystem\TextureLoader.cpp" />
+    <ClCompile Include="src\engine\graphics\Camera.cpp" />
+    <ClCompile Include="src\engine\graphics\window\GLFWWindow.cpp" />
+    <ClCompile Include="src\engine\graphics\window\QtWindow.cpp" />
+    <ClCompile Include="src\engine\math\Vec3.cpp" />
+    <ClCompile Include="src\engine\resources\BaseAnimation.cpp" />
+    <ClCompile Include="src\engine\resources\CollisionBoxes.cpp" />
+    <ClCompile Include="src\engine\resources\DirectionalLight.cpp" />
+    <ClCompile Include="src\engine\resources\Material.cpp" />
+    <ClCompile Include="src\engine\resources\MD5Animation.cpp" />
+    <ClCompile Include="src\engine\resources\Model.cpp" />
+    <ClCompile Include="src\engine\resources\PointLight.cpp" />
+    <ClCompile Include="src\engine\resources\Shader.cpp" />
+    <ClCompile Include="src\engine\resources\Skybox.cpp" />
+    <ClCompile Include="src\engine\resources\Text.cpp" />
+    <ClCompile Include="src\engine\resources\Texture.cpp" />
+    <ClCompile Include="src\engine\scene\Scene.cpp" />
+    <ClCompile Include="src\engine\scene\SceneManager.cpp" />
+    <ClCompile Include="src\engine\scene\states\SplashState.cpp" />
+    <ClCompile Include="src\engine\System.cpp" />
+    <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\systems\SAnimation.cpp" />
+    <ClCompile Include="src\systems\SCollision.cpp" />
+    <ClCompile Include="src\systems\SGraphics.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="binaries\shaders\shader.frag" />
+    <None Include="binaries\shaders\shader.geom" />
+    <None Include="binaries\shaders\shader.vert" />
+    <None Include="binaries\shaders\skybox.fs.glsl" />
+    <None Include="binaries\shaders\skybox.vs.glsl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
