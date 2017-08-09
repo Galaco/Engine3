@@ -8,7 +8,7 @@
 #include <QtGui/QPainter>
 
 Window::Window(QWindow *parent)
-	: QWindow(parent)
+	: QMainWindow(parent)
 	, m_animating(false)
 	, m_context(0)
 	, m_device(0)
@@ -44,7 +44,7 @@ void Window::render()
 
 void Window::renderLater()
 {
-	requestUpdate();
+	//requestUpdate();
 }
 
 bool Window::event(QEvent *event)
@@ -54,16 +54,9 @@ bool Window::event(QEvent *event)
 		renderNow();
 		return true;
 	default:
-		return QWindow::event(event);
+		return false;
+		//return QWindow::event(event);
 	}
-}
-
-void Window::exposeEvent(QExposeEvent *event)
-{
-	Q_UNUSED(event);
-
-	if (isExposed())
-		renderNow();
 }
 
 void Window::renderNow()
@@ -97,7 +90,7 @@ void Window::renderNow()
 }
 
 
-QOpenGLContext* Window::getContext()
+void* Window::getContext()
 {
 	return this->m_context;
 }

@@ -109,11 +109,35 @@
     <Filter Include="Source Files\engine\input">
       <UniqueIdentifier>{2a717568-c3ee-426e-bf61-dd9550362c2e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\systems\renderer">
+      <UniqueIdentifier>{0694e29a-0625-40f4-88b3-9225b28084b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\systems\renderer">
+      <UniqueIdentifier>{b8792976-fcf2-4e67-b2e3-45760df43aeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\editor">
+      <UniqueIdentifier>{efd1edbf-3dfc-43c0-906e-f7ba3271ee1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\editor">
+      <UniqueIdentifier>{6274d673-cb76-4421-ad1a-f93a4652d913}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\scene\valve">
+      <UniqueIdentifier>{ea6334ea-134d-4697-b8f6-44b11dd5295c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\scene\valve">
+      <UniqueIdentifier>{1e314174-50c2-4d27-ad4e-72b7c0aec430}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\resources\valve">
+      <UniqueIdentifier>{a2651437-bb20-4d91-988b-879981a9df06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\filesystem\exception">
+      <UniqueIdentifier>{58ad8ced-2af6-4f21-915d-9d9e48797bc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\filesystem\parser">
+      <UniqueIdentifier>{24425a6b-bc85-454d-9e03-d3354c5f7c80}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\components\CAnimation.h">
       <Filter>Header Files\components</Filter>
     </ClInclude>
@@ -273,11 +297,68 @@
     <ClInclude Include="src\engine\input\IInputListener.h">
       <Filter>Header Files\engine\input</Filter>
     </ClInclude>
+    <ClInclude Include="src\systems\renderer\DeferredPass.h">
+      <Filter>Header Files\systems\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\systems\renderer\DeferredRenderer.h">
+      <Filter>Header Files\systems\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\systems\renderer\DeferredShaders.h">
+      <Filter>Header Files\systems\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\systems\renderer\DirectionalLightPass.h">
+      <Filter>Header Files\systems\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\systems\renderer\GeometryPass.h">
+      <Filter>Header Files\systems\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\systems\renderer\PointLightPass.h">
+      <Filter>Header Files\systems\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\systems\renderer\StencilPass.h">
+      <Filter>Header Files\systems\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\systems\renderer\TransparencyPass.h">
+      <Filter>Header Files\systems\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\scene\valve\Vmf.h">
+      <Filter>Header Files\engine\scene\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\resources\valve\Mdl.h">
+      <Filter>Header Files\engine\resources\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\resources\valve\Vmf.h">
+      <Filter>Header Files\engine\resources\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\resources\valve\Vmt.h">
+      <Filter>Header Files\engine\resources\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\resources\valve\Vtf.h">
+      <Filter>Header Files\engine\resources\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\resources\valve\Brush.h">
+      <Filter>Header Files\engine\resources\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\resources\valve\Entity.h">
+      <Filter>Header Files\engine\resources\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\filesystem\FileHandle.h">
+      <Filter>Header Files\engine\filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\filesystem\FileSystemException.h">
+      <Filter>Header Files\engine\filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\filesystem\exception\FileNotFoundException.h">
+      <Filter>Header Files\engine\filesystem\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\filesystem\FileManager.h">
+      <Filter>Header Files\engine\filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\filesystem\exception\OrphanedFileHandleException.h">
+      <Filter>Header Files\engine\filesystem\exception</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\systems\SAnimation.cpp">
       <Filter>Source Files\systems</Filter>
     </ClCompile>
@@ -415,6 +496,33 @@
     </ClCompile>
     <ClCompile Include="src\engine\input\InputListener.cpp">
       <Filter>Source Files\engine\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systems\renderer\DeferredPass.cpp">
+      <Filter>Source Files\systems\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systems\renderer\DeferredRenderer.cpp">
+      <Filter>Source Files\systems\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systems\renderer\DirectionalLightPass.cpp">
+      <Filter>Source Files\systems\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systems\renderer\GeometryPass.cpp">
+      <Filter>Source Files\systems\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systems\renderer\PointLightPass.cpp">
+      <Filter>Source Files\systems\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systems\renderer\StencilPass.cpp">
+      <Filter>Source Files\systems\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\systems\renderer\TransparencyPass.cpp">
+      <Filter>Source Files\systems\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\filesystem\FileHandle.cpp">
+      <Filter>Source Files\engine\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\filesystem\FileManager.cpp">
+      <Filter>Source Files\engine\filesystem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

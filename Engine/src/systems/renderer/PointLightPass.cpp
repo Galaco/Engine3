@@ -76,7 +76,7 @@ void PointLightPass::startPass(CGraphics* it, PointLight* Light) {
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_FRONT);
 
-	Pipeline::position(it->getOwner()->GetTransform()->getPosition().x, it->getOwner()->GetTransform()->getPosition().y, it->getOwner()->GetTransform()->getPosition().z);
+	Pipeline::position(it->getOwner()->GetTransform().getPosition().x, it->getOwner()->GetTransform().getPosition().y, it->getOwner()->GetTransform().getPosition().z);
 	float BSphereScale = CalcPointLightBSphere(Light);
 	Pipeline::scale(BSphereScale, BSphereScale, BSphereScale);
 	glUniformMatrix4fv(m_MVPLocation, 1, GL_FALSE, &Pipeline::getTransformationMatrix()[0][0]);
@@ -84,7 +84,7 @@ void PointLightPass::startPass(CGraphics* it, PointLight* Light) {
 	glUniform3f(Color, Light->getColor().x, Light->getColor().y, Light->getColor().z);
 	glUniform1f(AmbientIntensity, Light->getAmbience());
 	glUniform1f(DiffuseIntensity, Light->getDiffuse());
-	glUniform3f(Position, it->getOwner()->GetTransform()->getPosition().x, it->getOwner()->GetTransform()->getPosition().y, it->getOwner()->GetTransform()->getPosition().z);
+	glUniform3f(Position, it->getOwner()->GetTransform().getPosition().x, it->getOwner()->GetTransform().getPosition().y, it->getOwner()->GetTransform().getPosition().z);
 	glUniform1f(Atten.Constant, Light->getAttenuationConstant());
 	glUniform1f(Atten.Linear, Light->getAttenuationLinear());
 	glUniform1f(Atten.Exp, Light->getAttenuationExp());	

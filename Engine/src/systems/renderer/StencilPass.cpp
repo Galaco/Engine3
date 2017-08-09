@@ -43,7 +43,7 @@ void StencilPass::startPass(CGraphics* it, PointLight* Light) {
 	glStencilOpSeparate(GL_BACK, GL_KEEP, GL_INCR_WRAP, GL_KEEP);
 	glStencilOpSeparate(GL_FRONT, GL_KEEP, GL_DECR_WRAP, GL_KEEP);
 
-	Pipeline::position(it->getOwner()->GetTransform()->getPosition().x, it->getOwner()->GetTransform()->getPosition().y, it->getOwner()->GetTransform()->getPosition().z);
+	Pipeline::position(it->getOwner()->GetTransform().getPosition().x, it->getOwner()->GetTransform().getPosition().y, it->getOwner()->GetTransform().getPosition().z);
 	float BSphereScale = CalcPointLightBSphere(Light);
 	Pipeline::scale(BSphereScale, BSphereScale, BSphereScale);	
 

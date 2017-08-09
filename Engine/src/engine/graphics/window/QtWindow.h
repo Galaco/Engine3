@@ -2,12 +2,12 @@
 #define WINDOW_H
 
 #include <graphics/BaseWindow.h>
-#include <QtGui/QWindow>
+#include <QtWidgets/QMainWindow>
 #include <QtGui/QOpenGLFunctions>
 
 class QOpenGLContext;
 
-class Window : public BaseWindow, public QWindow, protected QOpenGLFunctions
+class Window : public BaseWindow, public QMainWindow, protected QOpenGLFunctions
 {
 	Q_OBJECT
 public:
@@ -19,7 +19,7 @@ public:
 
 	virtual void initialize();
 
-	QOpenGLContext* getContext();
+	void* getContext();
 
 	void swapBuffers() override;
 	bool isValid() override;
@@ -32,8 +32,6 @@ public slots:
 
 protected:
 	bool event(QEvent *event) override;
-
-	void exposeEvent(QExposeEvent *event) override;
 
 
 private:

@@ -11,9 +11,12 @@ Description: Storage for raw mesh data. Note the differences between
 
 #include <vector>
 #include <string>
+#include <map>
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+
+#include <resources/Texture.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/quaternion.hpp>
