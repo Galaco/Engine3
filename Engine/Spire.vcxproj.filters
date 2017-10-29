@@ -61,12 +61,6 @@
     <Filter Include="Source Files\engine\graphics\window">
       <UniqueIdentifier>{cc466c15-f5f1-4e85-ab58-df141afb2898}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\engine\math">
-      <UniqueIdentifier>{da6e9074-f7ec-4f84-8373-75b8859f64b3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\engine\math">
-      <UniqueIdentifier>{03a4f4a4-d34e-4a8e-9ad3-2bd288001156}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\engine\resources">
       <UniqueIdentifier>{38379615-b41f-4172-aa77-c5871c1f0204}</UniqueIdentifier>
     </Filter>
@@ -118,9 +112,6 @@
     <Filter Include="Header Files\editor">
       <UniqueIdentifier>{efd1edbf-3dfc-43c0-906e-f7ba3271ee1c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\editor">
-      <UniqueIdentifier>{6274d673-cb76-4421-ad1a-f93a4652d913}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\engine\scene\valve">
       <UniqueIdentifier>{ea6334ea-134d-4697-b8f6-44b11dd5295c}</UniqueIdentifier>
     </Filter>
@@ -135,6 +126,12 @@
     </Filter>
     <Filter Include="Header Files\engine\filesystem\parser">
       <UniqueIdentifier>{24425a6b-bc85-454d-9e03-d3354c5f7c80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\messagequeue">
+      <UniqueIdentifier>{3ad94f71-96a8-44ed-957b-7ec600bc262e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\filesystem\parser">
+      <UniqueIdentifier>{9a3fee66-6522-40fe-aa7a-cc58cc73bad9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -171,21 +168,6 @@
     <ClInclude Include="src\engine\core\ResourceManager.h">
       <Filter>Header Files\engine\core</Filter>
     </ClInclude>
-    <ClInclude Include="src\engine\filesystem\AnimationLoader.h">
-      <Filter>Header Files\engine\filesystem</Filter>
-    </ClInclude>
-    <ClInclude Include="src\engine\filesystem\FileTypeLoader.h">
-      <Filter>Header Files\engine\filesystem</Filter>
-    </ClInclude>
-    <ClInclude Include="src\engine\filesystem\Md5Loader.h">
-      <Filter>Header Files\engine\filesystem</Filter>
-    </ClInclude>
-    <ClInclude Include="src\engine\filesystem\ModelLoader.h">
-      <Filter>Header Files\engine\filesystem</Filter>
-    </ClInclude>
-    <ClInclude Include="src\engine\filesystem\ObjLoader.h">
-      <Filter>Header Files\engine\filesystem</Filter>
-    </ClInclude>
     <ClInclude Include="src\engine\graphics\BaseWindow.h">
       <Filter>Header Files\engine\graphics</Filter>
     </ClInclude>
@@ -197,9 +179,6 @@
     </ClInclude>
     <ClInclude Include="src\engine\graphics\window\QtWindow.h">
       <Filter>Header Files\engine\graphics\window</Filter>
-    </ClInclude>
-    <ClInclude Include="src\engine\math\Vec3.h">
-      <Filter>Header Files\engine\math</Filter>
     </ClInclude>
     <ClInclude Include="src\engine\resources\BaseAnimation.h">
       <Filter>Header Files\engine\resources</Filter>
@@ -246,9 +225,6 @@
     <ClInclude Include="src\engine\scene\states\SplashState.h">
       <Filter>Header Files\engine\scene\states</Filter>
     </ClInclude>
-    <ClInclude Include="src\engine\filesystem\TextureLoader.h">
-      <Filter>Header Files\engine\filesystem</Filter>
-    </ClInclude>
     <ClInclude Include="src\engine\system\ISystem.h">
       <Filter>Header Files\engine\system</Filter>
     </ClInclude>
@@ -275,9 +251,6 @@
     </ClInclude>
     <ClInclude Include="src\engine\entity\IUniqueIdentifier.h">
       <Filter>Header Files\engine\entity</Filter>
-    </ClInclude>
-    <ClInclude Include="src\engine\filesystem\Config.h">
-      <Filter>Header Files\engine\filesystem</Filter>
     </ClInclude>
     <ClInclude Include="src\engine\input\Keyboard.h">
       <Filter>Header Files\engine\input</Filter>
@@ -357,6 +330,33 @@
     <ClInclude Include="src\engine\filesystem\exception\OrphanedFileHandleException.h">
       <Filter>Header Files\engine\filesystem\exception</Filter>
     </ClInclude>
+    <ClInclude Include="src\engine\messagequeue\MessageTypes.h">
+      <Filter>Header Files\engine\messagequeue</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\filesystem\AnimationLoader.h">
+      <Filter>Header Files\engine\filesystem\parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\filesystem\Config.h">
+      <Filter>Header Files\engine\filesystem\parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\filesystem\FileTypeLoader.h">
+      <Filter>Header Files\engine\filesystem\parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\filesystem\Md5Loader.h">
+      <Filter>Header Files\engine\filesystem\parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\filesystem\ModelLoader.h">
+      <Filter>Header Files\engine\filesystem\parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\filesystem\ObjLoader.h">
+      <Filter>Header Files\engine\filesystem\parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\filesystem\TextureLoader.h">
+      <Filter>Header Files\engine\filesystem\parser</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\messagequeue\MessageQueue.h">
+      <Filter>Header Files\engine\messagequeue</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\systems\SAnimation.cpp">
@@ -398,21 +398,6 @@
     <ClCompile Include="src\engine\core\ResourceManager.cpp">
       <Filter>Source Files\engine\core</Filter>
     </ClCompile>
-    <ClCompile Include="src\engine\filesystem\AnimationLoader.cpp">
-      <Filter>Source Files\engine\filesystem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\engine\filesystem\FileTypeLoader.cpp">
-      <Filter>Source Files\engine\filesystem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\engine\filesystem\Md5Loader.cpp">
-      <Filter>Source Files\engine\filesystem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\engine\filesystem\ModelLoader.cpp">
-      <Filter>Source Files\engine\filesystem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\engine\filesystem\ObjLoader.cpp">
-      <Filter>Source Files\engine\filesystem</Filter>
-    </ClCompile>
     <ClCompile Include="src\engine\graphics\window\GLFWWindow.cpp">
       <Filter>Source Files\engine\graphics\window</Filter>
     </ClCompile>
@@ -421,9 +406,6 @@
     </ClCompile>
     <ClCompile Include="src\engine\graphics\Camera.cpp">
       <Filter>Source Files\engine\graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="src\engine\math\Vec3.cpp">
-      <Filter>Source Files\engine\math</Filter>
     </ClCompile>
     <ClCompile Include="src\engine\resources\BaseAnimation.cpp">
       <Filter>Source Files\engine\resources</Filter>
@@ -467,9 +449,6 @@
     <ClCompile Include="src\engine\scene\states\SplashState.cpp">
       <Filter>Source Files\engine\scene\states</Filter>
     </ClCompile>
-    <ClCompile Include="src\engine\filesystem\TextureLoader.cpp">
-      <Filter>Source Files\engine\filesystem</Filter>
-    </ClCompile>
     <ClCompile Include="src\engine\system\System.cpp">
       <Filter>Source Files\engine\system</Filter>
     </ClCompile>
@@ -478,9 +457,6 @@
     </ClCompile>
     <ClCompile Include="src\engine\entity\components\CTransform.cpp">
       <Filter>Source Files\engine\entity\components</Filter>
-    </ClCompile>
-    <ClCompile Include="src\engine\filesystem\Config.cpp">
-      <Filter>Source Files\engine\filesystem</Filter>
     </ClCompile>
     <ClCompile Include="src\engine\input\Keyboard.cpp">
       <Filter>Source Files\engine\input</Filter>
@@ -523,6 +499,27 @@
     </ClCompile>
     <ClCompile Include="src\engine\filesystem\FileManager.cpp">
       <Filter>Source Files\engine\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\filesystem\AnimationLoader.cpp">
+      <Filter>Source Files\engine\filesystem\parser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\filesystem\Config.cpp">
+      <Filter>Source Files\engine\filesystem\parser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\filesystem\FileTypeLoader.cpp">
+      <Filter>Source Files\engine\filesystem\parser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\filesystem\Md5Loader.cpp">
+      <Filter>Source Files\engine\filesystem\parser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\filesystem\ModelLoader.cpp">
+      <Filter>Source Files\engine\filesystem\parser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\filesystem\ObjLoader.cpp">
+      <Filter>Source Files\engine\filesystem\parser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\filesystem\TextureLoader.cpp">
+      <Filter>Source Files\engine\filesystem\parser</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

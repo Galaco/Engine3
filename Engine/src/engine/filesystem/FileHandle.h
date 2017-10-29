@@ -11,12 +11,17 @@ public:
 	~FileHandle();
 
 	const char* getOrigin();
-	std::ifstream* getStream();
+	std::ifstream* getRawStream();
 
+	char* getRawData();
 	void closeStream();
 
 private:
+	char* readStream();
+
 	std::shared_ptr<std::ifstream*> file;
 	const char* filepath;
+
+	char* m_pRawStreamData;
 };
 #endif

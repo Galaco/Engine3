@@ -12,7 +12,7 @@ public:
 		return m_pSingleton;
 	}
 
-	FileHandle& requestFileHandle(const char* filename);
+	FileHandle& requestHandle(const char* filename);
 	void closeHandle(FileHandle& handle);
 
 private:

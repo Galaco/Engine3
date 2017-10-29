@@ -129,7 +129,8 @@
     <ClInclude Include="src\engine\input\InputListener.h" />
     <ClInclude Include="src\engine\input\Keyboard.h" />
     <ClInclude Include="src\engine\input\Mouse.h" />
-    <ClInclude Include="src\engine\math\Vec3.h" />
+    <ClInclude Include="src\engine\messagequeue\MessageQueue.h" />
+    <ClInclude Include="src\engine\messagequeue\MessageTypes.h" />
     <ClInclude Include="src\engine\resources\BaseAnimation.h" />
     <ClInclude Include="src\engine\resources\CollisionBoxes.h" />
     <ClInclude Include="src\engine\resources\DirectionalLight.h" />
@@ -195,7 +196,6 @@
     <ClCompile Include="src\engine\input\InputListener.cpp" />
     <ClCompile Include="src\engine\input\Keyboard.cpp" />
     <ClCompile Include="src\engine\input\Mouse.cpp" />
-    <ClCompile Include="src\engine\math\Vec3.cpp" />
     <ClCompile Include="src\engine\resources\BaseAnimation.cpp" />
     <ClCompile Include="src\engine\resources\CollisionBoxes.cpp" />
     <ClCompile Include="src\engine\resources\DirectionalLight.cpp" />
